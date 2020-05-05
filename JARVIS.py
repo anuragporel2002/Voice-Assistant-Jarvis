@@ -55,8 +55,8 @@ def sendEmail(to,content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('anuragporel2002@gmail.com', 'Anurag@2002')
-    server.sendmail('anuragporel2002@gmail.com', to, content)
+    server.login('youremail@gmail.com', 'your password')
+    server.sendmail('youremail@gmail.com', to, content)
     server.close()
 
 def weather_data(query):
@@ -151,7 +151,7 @@ if __name__=="__main__":
             try:
                 speak("what should I say?")
                 content=takeCommand()
-                to="anuragporel@gmail.com"
+                to="receiveremail@gmail.com"
                 sendEmail(to, content)
                 speak("email has been sent sir!")
             except Exception as e:
